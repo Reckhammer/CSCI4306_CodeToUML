@@ -15,12 +15,12 @@ Student project to create a program that will analyze source code and create a U
 ### Tools
 * C++ Programming Language
 * Visual Studio Community Edition 2019 IDE
-* Sublime IDE
+* Sublime Text
 * PlantUML ?
 
 ## Team Members
   * [Joshua Rechkemmer](https://github.com/reckhammer)
-  * [Adrien](https://github.com/Buwutiful)
+  * [Adrian Cardona](https://github.com/Buwutiful)
   
 ### School
 
