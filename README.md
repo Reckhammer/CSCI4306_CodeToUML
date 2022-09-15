@@ -10,7 +10,7 @@ Student project to create a program that will analyze source code and create a U
 * Standalone Windows Desktop Application
 
 ### Target Programming Language(s)
-* TODO
+* Java
 
 ### Tools
 * C++ Programming Language
