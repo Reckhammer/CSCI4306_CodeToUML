@@ -42,19 +42,22 @@ bool isValidPath(std::string user_input) {
 	//std::filesystem::path path(temp);
 
 	while(run) {
+		bool validPath = false;
 		std::cout << "Is '" << user_input << "' the correct path? (y/n)" << std::endl;
 		std::cin >> correctPath;
 
 		if(correctPath == "y") {
 			run = false;
-			return true;
+			validPath = true;
 		}
 		else if(correctPath == "n") {
 			run = false;
-			return false;
+			validPath = false;
 		}
 		else {
 			std::cout << "That is not the appropriate response." << std::endl;
 		}
+		
+		return validPath;
 	}
 }
