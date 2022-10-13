@@ -12,7 +12,8 @@ FILE* FileFormatter::createFormattedFile()
 	size_t slashPos = srcFilePath.rfind('/');
 	std::string fileName = srcFilePath.substr(slashPos + 1) +".txt";
 
-	FILE* umlFile = fopen(fileName.c_str(), "w"); // create a new file to write in
+	FILE* umlFile;
+	fopen_s(&umlFile, fileName.c_str(), "w"); // create a new file to write in
 	fputs("@startuml\n", umlFile);
 
 

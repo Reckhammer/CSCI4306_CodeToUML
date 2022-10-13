@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CodeToUML.cpp" />
+    <ClCompile Include="FileFormatterTest.cpp" />
     <ClCompile Include="FileFormatter.cpp" />
   </ItemGroup>
   <ItemGroup>

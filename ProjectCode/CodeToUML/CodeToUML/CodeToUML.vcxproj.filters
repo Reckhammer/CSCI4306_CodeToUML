@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CodeToUML.cpp">
+    <ClCompile Include="FileFormatterTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FileFormatter.cpp">
