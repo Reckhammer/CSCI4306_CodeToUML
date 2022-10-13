@@ -41,13 +41,15 @@ Course: CSCI 4316 Software Engineering I
   
   ### Use Case Documents
   
-  * Current Diagram: ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/UseCaseDiagram2.png)
-  * [Use Case Document](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/CodetoUMLUseCase.pptx)
-  * TODO : INSERT LINK TO IMAGE AND DOCUMENT ARCHIVES
+  * Current Diagram: ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/UseCaseDocumentation/UseCaseDiagrams/UseCaseDiagram2.png)
+  * [Use Case Document](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/UseCaseDocumentation/CodetoUMLUseCase.pdf)
+  * [Use Case Diagram Archive](https://github.com/Reckhammer/CSCI4316_CodeToUML/tree/main/Documentation/UseCaseDocumentation/UseCaseDiagrams)
+  * [Use Case Statement Archive](https://github.com/Reckhammer/CSCI4316_CodeToUML/tree/main/Documentation/UseCaseDocumentation)
   
   ### UML Diagrams
   
-  * Console UML Class Diagram : ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/CodeToUML-Console.png)
+  * Console UML Class Diagram : ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/ClassDiagrams/UML_ClassDiagram_Console.png)
+  * Console UML Sequence Diagram : ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/SequenceDiagrams/SequenceDraft.jpg)
   * GUI UML Class Diagram : 
-  * Console UML Sequence Diagram : TODO INSERT IMAGE LINK
-  * TODO: INSERT LINK TO IMAGE ARCHIVES
+  * [UML Class Diagram Archive](https://github.com/Reckhammer/CSCI4316_CodeToUML/tree/main/Documentation/ClassDiagrams)
+  * [UML Sequence Diagram Archive](https://github.com/Reckhammer/CSCI4316_CodeToUML/tree/main/Documentation/SequenceDiagrams)
