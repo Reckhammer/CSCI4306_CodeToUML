@@ -16,7 +16,7 @@ Student project to create a program that will analyze source code and create a U
 * C++ Programming Language
 * Visual Studio Community Edition 2019 IDE
 * Sublime Text
-* PlantUML ?
+* [PlantUML](https://plantuml.com/)
 
 ## Team Members
   * [Joshua Rechkemmer](https://github.com/reckhammer)
@@ -37,15 +37,17 @@ Course: CSCI 4316 Software Engineering I
   
   ### [Risk Analysis Document](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/RiskAnalysisTable.pdf)
   
+  
+  
   ### Use Case Documents
   
-     * Current Diagram: <img src = 'https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/Updated%20Use%20Case%20Diagram.png'/>
-     * [Use Case Document](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/Code%20to%20UML%20Use%20Case.pptx)
-     * TODO : INSERT LINK TO IMAGE AND DOCUMENT ARCHIVES
+  * Current Diagram: ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/UseCaseDiagram2.png)
+  * [Use Case Document](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/CodetoUMLUseCase.pptx)
+  * TODO : INSERT LINK TO IMAGE AND DOCUMENT ARCHIVES
   
   ### UML Diagrams
   
-    * Console UML Class Diagram : ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/CodeToUML-Console.png)
-    * GUI UML Class Diagram : 
-    * Console UML Sequence Diagram : TODO INSERT IMAGE LINK
-    * TODO: INSERT LINK TO IMAGE ARCHIVES
+  * Console UML Class Diagram : ![Image](https://github.com/Reckhammer/CSCI4316_CodeToUML/blob/main/Documentation/CodeToUML-Console.png)
+  * GUI UML Class Diagram : 
+  * Console UML Sequence Diagram : TODO INSERT IMAGE LINK
+  * TODO: INSERT LINK TO IMAGE ARCHIVES
