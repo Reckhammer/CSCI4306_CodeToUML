@@ -1,7 +1,7 @@
 Link to TestPlan Google Doc: 
 
 2 Methods:
-  1. Recursive Folder ( Joshua )
+  1. Recursive Folder ( Joshua ) joshua.rechkemmer48@gmail.com
   2. Individual direct paths ( Adrian )
 
 2 Use Cases Each:
