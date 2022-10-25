@@ -1,4 +1,4 @@
-Link to TestPlan Google Doc: 
+Link to TestPlan Google Doc: [Word Doc](https://docs.google.com/document/d/1sWYO1zC14L5jbCsOAd9uqFoamCz14AhB/edit?usp=sharing&ouid=102956458512570303914&rtpof=true&sd=true)
 
 2 Methods:
   1. Recursive Folder ( Joshua ) joshua.rechkemmer48@gmail.com
