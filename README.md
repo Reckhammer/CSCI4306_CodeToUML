@@ -53,3 +53,6 @@ Course: CSCI 4316 Software Engineering I
   * GUI UML Class Diagram : 
   * [UML Class Diagram Archive](https://github.com/Reckhammer/CSCI4316_CodeToUML/tree/main/Documentation/ClassDiagrams)
   * [UML Sequence Diagram Archive](https://github.com/Reckhammer/CSCI4316_CodeToUML/tree/main/Documentation/SequenceDiagrams)
+
+
+Bad exasmple
