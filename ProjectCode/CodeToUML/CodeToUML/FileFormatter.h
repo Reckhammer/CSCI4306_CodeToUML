@@ -9,14 +9,15 @@ class FileFormatter
 {
 private:
 	std::string srcFilePath;
+	std::string destFilePath;
 
 public:
-	FileFormatter(std::string);
+	FileFormatter(std::string, std::string);
 	FILE* createFormattedFile();
 
 private:
-	void readProject(std::string);
-	void readFile(std::string);
+	void readProject(std::string, FILE*);
+	void readFile(std::string, FILE*);
 	std::string* getTokens(std::string, std::string);
 	bool isKeyword(std::string);
 };

@@ -4,6 +4,8 @@
 #include <string> //the string itself
 //#include <filesystem> //To take in file path input
 
+#include <FileFormatter.h>
+
 inline void keep_window_open() {char ch; std::cin>>ch;}
 
 std::string promptForPath(std::string user_input);
@@ -60,4 +62,12 @@ bool isValidPath(std::string user_input) {
 		
 		return validPath;
 	}
+}
+
+void testFileFormattter()
+{
+	std::string testPath = "C:\\Users\\JEDIJ\\Documents\\C\\CSCI4316_CodeToUML\\ProjectCode\\CodeToUML";
+	FileFormatter formatter(testPath);
+
+	formatter.createFormattedFile();
 }
