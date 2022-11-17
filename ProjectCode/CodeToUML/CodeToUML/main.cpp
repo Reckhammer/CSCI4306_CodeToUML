@@ -8,7 +8,6 @@
 inline void keep_window_open() {char ch; std::cin>>ch;}
 
 std::string promptForPath();
-bool isValidPath(std::string user_input);
 int selectionType();
 void individualSelection(std::vector<std::string> file_List);
 std::vector<std::string> removeFiles(std::vector<std::string> file_List);
@@ -68,39 +67,8 @@ std::string promptForPath() {
 		if(fs.fail()) {
 			std::cout << file_path << " doesn't exist or is corrupted." << std::endl;
 		}
-
-		if(isValidPath(file_path) == true) {
-			run = false;
-		}
 	}
-
 	return file_path;
-}
-
-bool isValidPath(std::string user_input) {
-	bool validPath = false;
-	std::string correctPath = "";
-	std::string temp = user_input;
-	bool run = true;
-
-	while(run) {
-		std::cout << "Is '" << user_input << "' the correct path? (y/n)" << std::endl;
-		std::cin >> correctPath;
-
-		if(correctPath == "y") {
-			run = false;
-			validPath = true;
-		}
-		else if(correctPath == "n") {
-			run = false;
-			validPath = false;
-		}
-		else {
-			std::cout << "That is not the appropriate response." << std::endl;
-		}
-	}
-
-	return validPath;
 }
 
 int selectionType() {
