@@ -57,30 +57,32 @@ FILE* FileFormatter::createFormattedFile(std::vector<std::string> fileList)
 // private
 void FileFormatter::readProject(std::string projectPath, FILE* writeFile)
 {
-	for (const auto entry : fs::recursive_directory_iterator(projectPath))
-	{
-		// Only read if its a java file
-		if ( entry.path().extension().string().compare(".java") == 0 )
-			readFile(entry.path().string(), writeFile);
-	}
+	//for (const auto entry : fs::recursive_directory_iterator(projectPath))
+	//{
+	//	// Only read if its a java file
+	//	//if ( entry.path().extension().string().compare(".java") == 0 )
+	//		//readFile(&entry.path().string(), writeFile);
+	//}
 }
 
 void FileFormatter::readFile(std::string filePath, FILE* writeFile)
 {
-	FILE* srcFile = fopen(filePath.c_str(), "r"); // open the file to read
+	FILE* srcFile;
+	fopen_s(&srcFile, filePath.c_str(), "r"); // open the file to read
 
 	bool hasHeader = false;
 
 	// containers for fgets
-	char* line;
-	size_t len = 0;
+	char line[100];
+	size_t len = 100;
 
 	std::stack<char> brackets;
 
 	// Find the file header i.e. class, interface, etc
 	// Loop til the file ends or header is found
-	while (fgets(line, len, srcFile) != NULL && !hasHeader)
+	while ( feof(srcFile) == 0 && !hasHeader)
 	{
+		fgets(line, len, srcFile);
 		hasHeader = isFileHeader(trim(line));
 	}
 
@@ -106,8 +108,9 @@ void FileFormatter::readFile(std::string filePath, FILE* writeFile)
 		return;
 	}
 
-	while (fgets(line, len, srcFile) != NULL && brackets.size() > 0)
+	while (feof(srcFile) == 0)
 	{
+		fgets(line, len, srcFile);
 		std::string trimmedLine = trim(line);
 
 		if (trimmedLine.find('{') != std::string::npos)
@@ -123,7 +126,10 @@ void FileFormatter::readFile(std::string filePath, FILE* writeFile)
 		}
 		if (trimmedLine.find('}') != std::string::npos)
 		{
-			brackets.pop();
+			if (brackets.size() > 0)
+				brackets.pop();
+			else
+				break;
 			continue;
 		}
 
@@ -255,7 +261,7 @@ bool FileFormatter::hasVisMod(std::string line)
 
 std::string FileFormatter::getVisMod(std::string line)
 {
-	std::string visModWord = line.substr(line.find(' ') + 1);
+	std::string visModWord = line.substr(0, line.find(' '));
 
 	if (visModWord.compare("private") == 0)
 		return std::string("-");
