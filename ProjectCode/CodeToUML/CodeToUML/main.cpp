@@ -52,12 +52,12 @@ std::string promptForPath() {
 	while(run) {
 		std::cout << "Please enter the file name of the code you'd like to produce a UML diagram for: " << std::endl
 			<< "Make sure the file is located in the 'Java Code' folder!" << std::endl
-			<< "Needs to be a java file!" << std::enl
+			<< "Needs to be a java file!" << std::endl
 			<< "Enter 'x' to cancel (Case sensitive!)" << std::endl
 			<< "File name: ";
 		std::getline(std::cin >> std::ws, file_path);
 
-		if(toLowerCase(file_path) == "x") {
+		if(file_path == "x") {
 			std::cout << std::endl << "Cancelling." << std::endl << std::endl;
 			run = false;
 		}
@@ -67,7 +67,7 @@ std::string promptForPath() {
 			fs.open(std::string("Java Code\\" + file_path));
 
 			if(fs.fail()) {
-				std::cout << std::endl << file_path << " doesn't exist or is corrupted." << std::endl;
+				std::cout << std::endl << file_path << " doesn't exist or is corrupted." << std::endl << std::endl;
 			}
 			else {
 				run = false;
@@ -105,16 +105,18 @@ void individualSelection(std::vector<std::string> file_List) {
 
 	file_name = promptForPath();
 
-	if(toLowerCase(file_name) != "x") {
+	if(file_name != "x") {
 		temp_List.push_back(file_name);
 	}
 
 	while(run) {
-		std::cout << "Here are the files that will be used to create the UML diagram:" << std::endl;
+		int duplicate = 0;
+
+		std::cout << std::endl << "Here are the files that will be used to create the UML diagram:" << std::endl;
 
 		showListofFiles(temp_List);
 
-		std::cout << "Would you like to:" << std::endl
+		std::cout << std::endl << "Would you like to:" << std::endl
 			<< "1. Add a new file" << std::endl
 			<< "2. Remove unwanted files" << std::endl
 			<< "3. Confirm selection" << std::endl
@@ -129,11 +131,11 @@ void individualSelection(std::vector<std::string> file_List) {
 			case 1:
 				file_name = promptForPath();
 
-				if(toLowerCase(file_name) != "x") {
+				if(file_name != "x") {
 					temp_List.push_back(file_name);
 				}
 
-				for (int i = 0; i < temp_List.size(); i++) {
+				for (int i = 0; i < int(temp_List.size()); i++) {
 				if (file_name == temp_List[i]) {
 					duplicate++;
 					}
