@@ -1,0 +1,10 @@
+@startuml
+TestChild extend --|> 
+
+class TestChild {
++ int number;
+-
++ char inherit(int num)
+}
+
+@enduml

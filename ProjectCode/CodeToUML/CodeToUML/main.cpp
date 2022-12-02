@@ -5,6 +5,8 @@
 #include <vector> //creating a list of files
 #include <fstream> //for reading and writing to files
 
+#include "FileFormatter.h"
+
 inline void keep_window_open() {char ch; std::cin>>ch;}
 
 std::string promptForPath();
@@ -49,9 +51,11 @@ std::string promptForPath() {
 	bool run = true;
 	std::string file_path;
 
+	const std::string fileDeposit = ".\\JavaCode\\";
+
 	while(run) {
 		std::cout << "Please enter the file name of the code you'd like to produce a UML diagram for: " << std::endl
-			<< "Make sure the file is located in the 'Java Code' folder!" << std::endl
+			<< "Make sure the file is located in the 'JavaCode' folder!" << std::endl
 			<< "Needs to be a java file!" << std::endl
 			<< "Enter 'x' to cancel (Case sensitive!)" << std::endl
 			<< "File name: ";
@@ -64,7 +68,7 @@ std::string promptForPath() {
 		else {
 			std::fstream fs;
 
-			fs.open(std::string("Java Code\\" + file_path));
+			fs.open(std::string(fileDeposit + file_path));
 
 			if(fs.fail()) {
 				std::cout << std::endl << file_path << " doesn't exist or is corrupted." << std::endl << std::endl;
@@ -75,7 +79,7 @@ std::string promptForPath() {
 			fs.close();
 		}
 	}
-	return file_path;
+	return fileDeposit + file_path;
 }
 
 int selectionType() {
@@ -100,6 +104,8 @@ void individualSelection(std::vector<std::string> file_List) {
 	bool run = true;
 	int select_Option = 0;
 	std::string file_name;
+
+	FileFormatter formatter("", "");
 
 	std::vector<std::string> temp_List;
 
@@ -162,6 +168,9 @@ void individualSelection(std::vector<std::string> file_List) {
 				if(temp_List.size() == 0) {
 					std::cout << std::endl << "There are no files to use." << std::endl;
 				}
+
+				formatter.createFormattedFile(temp_List);
+
 				run = false;
 				break;
 			case 4:
