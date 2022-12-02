@@ -70,11 +70,18 @@ std::string promptForPath() {
 
 			fs.open(std::string(fileDeposit + file_path));
 
+			std::string temp_string = fileDeposit + file_path;
+
 			if(fs.fail()) {
 				std::cout << std::endl << file_path << " doesn't exist or is corrupted." << std::endl << std::endl;
 			}
 			else {
-				run = false;
+				if(temp_string.substr(temp_string.find_last_of(".") + 1) == "java") {
+				    run = false;
+				} 
+				else {
+				    std::cout << std::endl << "File type not supported." << std::endl << std::endl;
+				}
 			}
 			fs.close();
 		}
@@ -111,7 +118,7 @@ void individualSelection(std::vector<std::string> file_List) {
 
 	file_name = promptForPath();
 
-	if(file_name != "x") {
+	if(file_name != ".\\JavaCode\\x") {
 		temp_List.push_back(file_name);
 	}
 
@@ -137,7 +144,7 @@ void individualSelection(std::vector<std::string> file_List) {
 			case 1:
 				file_name = promptForPath();
 
-				if(file_name != "x") {
+				if(file_name != ".\\JavaCode\\x") {
 					temp_List.push_back(file_name);
 				}
 
