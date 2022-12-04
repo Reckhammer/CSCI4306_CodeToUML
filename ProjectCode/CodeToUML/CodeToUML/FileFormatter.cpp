@@ -88,7 +88,7 @@ void FileFormatter::readFile(std::string filePath, FILE* writeFile)
 
 	if (hasHeader)
 	{
-		fputs(getFileHeader(line).c_str(), writeFile);
+		fputs(getFileHeader(trim(line)).c_str(), writeFile);
 
 		// if there is no {, just add the newline to file
 		// else add { and newline to file
@@ -135,8 +135,12 @@ void FileFormatter::readFile(std::string filePath, FILE* writeFile)
 
 		if (brackets.size() == 1)
 		{
-			std::string formattedLine = getFormattedLine(trimmedLine);
-			fputs(formattedLine.c_str(), writeFile);
+			std::string lineStr(line);
+			if (lineStr.size() > 0)
+			{
+				std::string formattedLine = getFormattedLine(trimmedLine);
+				fputs(formattedLine.c_str(), writeFile);
+			}
 		}
 	}
 
@@ -237,7 +241,9 @@ std::string FileFormatter::getRelation(std::string line)
 	}
 
 	// The relationship line i.e. class1 --|> class2
-	fStr.append(line.substr(line.find(' ') + 1, relationPos));
+	size_t childNameBegin = line.find(' ') + 1;
+	size_t childNameEnd = line.rfind(' ', relationPos-1) - childNameBegin; 
+	fStr.append(line.substr(childNameBegin, childNameEnd));
 	fStr.append(" "+ relationSymbol +" ");
 	fStr.append(line.substr(line.rfind(' ') + 1)+"\n");
 

@@ -42,9 +42,9 @@ int main() {
 		}
 	}
 
-	std::cout << std::endl << "All done, press any button to exit. (Work in progress)" << std::endl;
+	std::cout << std::endl << "All done, press any button to exit." << std::endl;
 
-	keep_window_open();
+	//keep_window_open();
 }
 
 std::string promptForPath() {
